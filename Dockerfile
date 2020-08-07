@@ -2,7 +2,7 @@ FROM alpine:edge
 
 LABEL maintainer "Carlos Ruiz <karlosarr@protonmail.com>"
 
-RUN echo http://dl-4.alpinelinux.org/alpine/edge/releases >> /etc/apk/repositories && \
+RUN echo http://dl-4.alpinelinux.org/alpine/edge/releases/ >> /etc/apk/repositories && \
   apk update && \
   apk add --no-cache mongodb-tools py2-pip && \
   pip install pymongo && \
