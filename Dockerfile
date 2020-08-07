@@ -3,7 +3,8 @@ FROM alpine:3.12.0
 LABEL maintainer "Carlos Ruiz <karlosarr@protonmail.com>"
 
 RUN echo http://dl-4.alpinelinux.org/alpine/edge/releases >> /etc/apk/repositories && \
-  apk add --update  --no-cache mongodb-tools py2-pip && \
+  apk update && \
+  apk add --update --no-cache mongodb-tools py2-pip && \
   pip install pymongo && \
   mkdir /backup
 
