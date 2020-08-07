@@ -1,8 +1,8 @@
-FROM alpine:3.12.0
+FROM alpine::3.8
 
 LABEL maintainer "Carlos Ruiz <karlosarr@protonmail.com>"
 
-RUN echo http://dl-cdn.alpinelinux.org/alpine/v3.12/main >> /etc/apk/repositories
+RUN echo http://dl-cdn.alpinelinux.org/alpine/v3.8/main >> /etc/apk/repositories
 RUN apk update
 RUN apk add --update --no-cache py2-pip mongodb-tools && \
   pip install pymongo && \
