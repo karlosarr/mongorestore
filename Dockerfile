@@ -9,10 +9,6 @@ RUN apk add --update --no-cache py2-pip mongodb-tools && \
   pip install pymongo && \
   mkdir /backup
 
-COPY entrypoint.sh /usr/local/bin/entrypoint
-COPY restore.sh /usr/local/bin/restore
-COPY mongouri.py /usr/local/bin/mongouri
-
 VOLUME /backup
 
 CMD /usr/local/bin/entrypoint
