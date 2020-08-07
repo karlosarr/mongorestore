@@ -1,4 +1,4 @@
-FROM alpine:edge
+FROM alpine:3.12.0
 
 LABEL maintainer "Carlos Ruiz <karlosarr@protonmail.com>"
 
