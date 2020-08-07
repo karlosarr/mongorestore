@@ -4,7 +4,7 @@ LABEL maintainer "Carlos Ruiz <karlosarr@protonmail.com>"
 
 RUN echo http://dl-cdn.alpinelinux.org/alpine/v3.12/main >> /etc/apk/repositories
 RUN apk update
-RUN apk add --update --no-cache mongodb-tools py-pip py2-pip && \
+RUN apk add --update --no-cache py-pip py2-pip mongodb-tools && \
   pip install pymongo && \
   mkdir /backup
 
